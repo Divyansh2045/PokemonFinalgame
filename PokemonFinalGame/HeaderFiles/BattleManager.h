@@ -12,6 +12,6 @@ private:
     void battle();
     void handleBattleOutcome();
     void updateBattleState(); 
+    void blabla();
 };
 
-//HI is this goingto see
