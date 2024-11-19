@@ -1,23 +1,25 @@
 #pragma once
 #include <string>
-using namespace std;
 
-enum class PokemonType;
+namespace N_Pokemon {
 
-class Pokemon {
-public:
-    string name;
-    PokemonType type;
-    int health; 
-    int maxHealth; 
-    int attackPower; 
+    enum class PokemonType;
 
-    Pokemon(); 
-    Pokemon(string p_name, PokemonType p_type, int p_health, int p_attackPower);
-    Pokemon(const Pokemon &other);
+    class Pokemon {
+    public:
+        std::string name;
+        PokemonType type;
+        int health;
+        int maxHealth;
+        int attackPower;
 
-    bool isFainted() const;
-    void heal();
-    void attack(Pokemon &target);
-    void takeDamage(int damage);
-};
+        Pokemon();
+        Pokemon(std::string p_name, PokemonType p_type, int p_health, int p_attackPower);
+        Pokemon(Pokemon* other);
+
+        bool isFainted() const;
+        void heal();
+        void attack(Pokemon* target);
+        void takeDamage(int damage);
+    };
+}
