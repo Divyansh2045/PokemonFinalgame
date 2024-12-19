@@ -52,3 +52,46 @@ void Pokemon::attack(Pokemon &target) {
             << " damage!\n";
   target.takeDamage(attackPower);
 }
+
+void Pokemon::printAvailableMoves()
+{
+    cout << name << "'s available moves" << endl;
+
+    //list out all the moves
+
+    for (size_t i = 0, i < moves.size(), ++i)
+    {
+        cout << i + 1 << ":" << moves[i].name << "(Power:" << moves[i].power << ")" << endl;
+    }
+}
+
+int Pokemon::selectMove()
+{
+    int choice;
+
+    cout << "Choose a move" << endl;
+    cin >> choice;
+
+    while (choice < 1 || choice > static_cast<int>(moves.size())) 
+    {
+        cout << "Invalid choice. Try again: " << endl;
+        cin >> choice;
+    }
+
+    return choice;    
+}
+
+void Pokemon::useMove(Move selectedMove, Pokemon* target) {
+    cout << name << " used " << selectedMove.name << "!\n";
+    attack(selectedMove, target);
+
+    N_Utility::Utility::waitForEnter();
+
+    cout << "...\n";
+    N_Utility::Utility::waitForEnter();
+
+    if (target->isFainted())
+        cout << target->name << " fainted!\n";
+    else
+        cout << target->name << " has " << target->health << " HP left.\n";
+}

@@ -12,6 +12,7 @@ namespace N_Pokemon {
         int health;
         int maxHealth;
         int attackPower;
+        vector <Move> moves; //to store the list of pokemon moves
 
         Pokemon();
         Pokemon(std::string p_name, PokemonType p_type, int p_health, int p_attackPower);
@@ -21,5 +22,11 @@ namespace N_Pokemon {
         void heal();
         virtual void attack(Pokemon* target) = 0;
         void takeDamage(int damage);
+        void printAvailableMoves();
+        int selectMove();
+        void useMove(Move selectedMove, Pokemon* target);
+
+    protected:
+        void selectAndUseMove(Pokemon* target);
     };
 }
