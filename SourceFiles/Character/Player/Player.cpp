@@ -1,10 +1,9 @@
-#pragma once
-#include "Player.hpp"
-#include "PokemonChoice.hpp"
-#include "PokemonType.hpp"
-#include "Utility.hpp"
+#include "../../../include/Character/Player/Player.h"
+#include "../../../include/Pokemon/PokemonChoice.h"
+#include "../../../include/Pokemon/PokemonType.h"
+#include "../../../include/Pokemon/Pokemons/Pikachu.h"
+#include "../../../include/Utility/Utility.h"
 #include "iostream"
-using namespace std;
 
 namespace N_Character
 {

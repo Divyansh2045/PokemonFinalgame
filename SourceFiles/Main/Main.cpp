@@ -15,7 +15,9 @@ int main() {
 
     // Greet the player and offer Pokemon choices
     professor->greetPlayer(player);
+
     professor->offerPokemonChoices(player);
+
 
     // Explain the main quest
     professor->explainMainQuest(player);
