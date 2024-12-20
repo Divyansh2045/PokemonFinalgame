@@ -1,5 +1,5 @@
-#include "../../../include/Pokemon/Pokemons/Charmander.hpp"
-#include "../../../include/Pokemon/PokemonType.hpp"
+#include "../../../include/Pokemon/Pokemons/Charmander.h"
+#include "../../../include/Pokemon/PokemonType.h"
 #include <iostream>
 
 namespace N_Pokemon {

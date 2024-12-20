@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Player/Player.hpp"
+#include "Player/Player.h"
 
 class Player;
 

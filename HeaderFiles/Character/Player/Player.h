@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "../../Pokemon/Pokemon.hpp"
+#include "../../Pokemon/Pokemon.h"
 
 namespace N_Character
 {

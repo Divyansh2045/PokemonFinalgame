@@ -22,7 +22,7 @@ namespace N_Battle
     void BattleManager::battle() {
         while (battleState.battleOngoing) {
             if (battleState.playerTurn) {
-                battleState.playerPokemon->attack(battleState.wildPokemon);
+                battleState.playerPokemon->selectAndUseMove(battleState.wildPokemon);
             }
             else {
                 battleState.wildPokemon->attack(battleState.playerPokemon);

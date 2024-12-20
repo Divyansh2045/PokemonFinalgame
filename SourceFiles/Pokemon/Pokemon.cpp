@@ -47,10 +47,10 @@ bool Pokemon::isFainted() const { return health <= 0; }
 void Pokemon::heal() { health = maxHealth; }
 
 // Attack another Pokemon
-void Pokemon::attack(Pokemon &target) {
+void Pokemon::attack(Move selectedMove, Pokemon * target) {
   cout << name << " attacks " << target.name << " for " << attackPower
             << " damage!\n";
-  target.takeDamage(attackPower);
+  target->takeDamage(selectedMove.power);
 }
 
 void Pokemon::printAvailableMoves()
@@ -95,3 +95,4 @@ void Pokemon::useMove(Move selectedMove, Pokemon* target) {
     else
         cout << target->name << " has " << target->health << " HP left.\n";
 }
+m

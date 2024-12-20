@@ -1,6 +1,6 @@
 #pragma once
-#include "../Battle/BattleState.hpp"
-#include "../Character/Player/Player.hpp"
+#include "../Battle/BattleState.h"
+#include "../Character/Player/Player.h"
 
 namespace N_Battle
 {

@@ -1,6 +1,6 @@
-#include "include/Main/Game.hpp"
-#include "include/Character/Player/Player.hpp"
-#include "include/Character/ProfessorOak.hpp"
+#include "include/Main/Game.h"
+#include "include/Character/Player/Player.h"
+#include "include/Character/ProfessorOak.h"
 #include <iostream>
 #include <limits> // Include this header to use std::numeric_limits
 

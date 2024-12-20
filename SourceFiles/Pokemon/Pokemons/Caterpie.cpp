@@ -1,5 +1,5 @@
-#include "../../../include/Pokemon/Pokemons/Caterpie.hpp"
-#include "../../../include/Pokemon/PokemonType.hpp"
+#include "../../../include/Pokemon/Pokemons/Caterpie.h"
+#include "../../../include/Pokemon/PokemonType.h"
 #include <iostream>
 
 namespace N_Pokemon {
@@ -16,9 +16,17 @@ namespace N_Pokemon {
 
         }
 
-        void Caterpie::attack(Pokemon* target)
+        void Caterpie::attack(Move selectedMove, Pokemon* target)
         {
-            bugBite(target);
+            Pokemon::attack(selectedMove, target);
+
         }
+
+        if (selectedMove.name == "STICKY WEB")
+
+            int reducedDamage = 5;
+        target->reduceAttackPower(reducedDamage);
+
+      
     }
 }

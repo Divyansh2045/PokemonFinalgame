@@ -1,5 +1,5 @@
-#include "../../../include/Pokemon/Pokemons/Pidgey.hpp"
-#include "../../../include/Pokemon/PokemonType.hpp"
+#include "../../../include/Pokemon/Pokemons/Pidgey.h"
+#include "../../../include/Pokemon/PokemonType.h"
 #include <iostream>
 
 namespace N_Pokemon {
