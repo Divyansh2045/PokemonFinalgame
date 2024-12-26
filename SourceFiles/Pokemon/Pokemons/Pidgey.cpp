@@ -12,8 +12,20 @@ namespace N_Pokemon {
             cout << name << " uses Wing Attack on " << target->name << "!\n";
             target->takeDamage(20);
         }
-        void Pidgey::attack(Pokemon* target)
+        void Pidgey::attack(Move selctedMove, Pokemon* target)
         {
-            wingAttack(target);
+            Pokemon::attack(selctedMove, target);
+
+            if (selectedMove == "GUST")
+            {
+                if (rand() % 100 < 20)
+                {
+                    std::cout << "... and blew the opponent away!\n";
+                    N_Battle::BattleManager::stopBattle();
+                    N_Utility::Utility::waitForEnter();
+                }
+            }
         }
+
+
     }

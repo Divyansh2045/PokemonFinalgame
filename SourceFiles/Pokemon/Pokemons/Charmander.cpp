@@ -13,9 +13,16 @@ namespace N_Pokemon {
             target->takeDamage(20);
         }
 
-        void Charmander::attack(Pokemon* target)
+        void Charmander::attack(Move selctedMove, Pokemon* target)
         {
-            flameThrower(target);
+            Pokemon::attack(selctedMove, target);
+
+            if (selectedMove == "BLAZING CHARGE")
+            {
+                this->takeDamage(10);
+                std::cout << name << " takes 10 recoil damage from the Blazing Charge!\n";
+                N_Utility::Utility::waitForEnter();
+            }
         }
     }
 }
