@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include <vector>
+#include "Move.h"
+using namespace std;
 
 namespace N_Pokemon {
 
