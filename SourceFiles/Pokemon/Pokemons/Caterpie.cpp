@@ -22,11 +22,14 @@ namespace N_Pokemon {
 
         }
 
-        if (selectedMove.name == "STICKY WEB")
+        if (selectedMove.name == "STICKYWEB")
+        {
 
             int reducedDamage = 5;
-        target->reduceAttackPower(reducedDamage);
+            target->reduceAttackPower(reducedDamage);
+            std::cout << target->name << "'s next attack will be reduced by " << reducedDamage << " damage!\n";
 
-      
+        }
+
     }
 }

@@ -3,6 +3,7 @@
 
 namespace N_Pokemon {
 
+    struct Move;
     enum class PokemonType;
 
     class Pokemon {
